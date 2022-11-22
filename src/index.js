@@ -4,6 +4,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 
 // Styles
 import "./styles/index.css";
+import "./styles/fonts.css";
 
 // Components
 import App from "./App";

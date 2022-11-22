@@ -1,5 +1,6 @@
 .container {
-  background: red;
+  background: #edede9;
   width: 100vw;
   height: calc(100vh - 50px);
+  text-align: center;
 }

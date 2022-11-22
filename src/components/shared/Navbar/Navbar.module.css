@@ -1,5 +1,27 @@
 .container {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   height: 50px;
+  background: #cececa;
+}
+.menu {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: black;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.active {
+  border-radius: 5px;
+  padding: 3px 8px;
+  color: #edede9 !important;
+  background: #ad343e;
 }
