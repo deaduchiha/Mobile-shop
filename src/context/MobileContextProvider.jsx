@@ -7,6 +7,9 @@ const initialState = {
   image: "",
 };
 
+// MobileReducer
+const mobileReducer = (state, action) => {};
+
 const MobileContex = useContext();
 
 const MobileContextProvider = ({ children }) => {
