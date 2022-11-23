@@ -6,14 +6,17 @@ import styles from "./Navbar.module.css";
 
 const Navbar = () => {
   let name = useLocation().pathname;
-  console.log(name);
+
   return (
     <div className={styles.container}>
       <div className={styles.menu}>
-        <Link className={name === "/" && styles.active} to="/">
+        <Link className={name === "/" ? styles.active : null} to="/">
           List
         </Link>
-        <Link className={name === "/mobile" && styles.active} to="/mobile">
+        <Link
+          className={name === "/mobile" ? styles.active : null}
+          to="/mobile"
+        >
           Mobile
         </Link>
       </div>
