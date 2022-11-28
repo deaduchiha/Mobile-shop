@@ -26,7 +26,8 @@ const Mobile = () => {
     setModelValue({ ...modelValue, [event.target.name]: event.target.value });
   };
 
-  const submitHandler = (event) => {
+  // Submit Handler
+  const submitHandler = () => {
     if (`${modelValue.desc && modelValue.model && modelValue.price}` === "")
       setPlaceholder("its empty :'(🥲");
     else {
@@ -71,7 +72,9 @@ const Mobile = () => {
       </div>
       <div className={styles.title}>
         <span>Phone image: </span>
+
         <Input
+          multiple={false}
           onChange={changeHandler}
           name="image"
           accept="image/*"
