@@ -10,12 +10,7 @@ const Cards = (props) => {
       <Card
         className={styles.cards}
         hoverable
-        cover={
-          <img
-            src={require(`../../assets/images/${props.image}`)}
-            alt="example"
-          />
-        }
+        cover={<img src={props.image} alt={props.title} />}
       >
         <div style={{ textAlign: "left" }}>
           <p className={styles.title}>

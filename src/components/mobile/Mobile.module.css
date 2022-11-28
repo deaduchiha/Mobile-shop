@@ -1,0 +1,23 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+}
+.title input {
+  max-width: 250px !important;
+  min-width: 250px !important;
+}
+.title span {
+  display: inline-block;
+  min-width: 120px;
+}
+.textArea {
+  max-width: 250px !important;
+  min-width: 250px !important;
+  max-height: 150px !important;
+  min-height: 85px !important;
+}

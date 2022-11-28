@@ -1,22 +1,26 @@
-import React from "react";
+import React, { useContext } from "react";
 
 // Components
 import Cards from "./Cards";
 
+// Context
+import { MobileContext } from "../../context/MobileContextProvider";
+
 // Styles
 import styles from "./List.module.css";
 
-import { phones } from "./Items";
 const List = () => {
+  const { state } = useContext(MobileContext);
+
   return (
     <div className={styles.container}>
-      {phones.map((item) => (
+      {state.products.map((product) => (
         <Cards
-          key={item.model}
-          image={item.image}
-          model={item.model}
-          price={item.price}
-          desc={item.desc}
+          key={product.id}
+          image={product.image}
+          model={product.model}
+          price={product.price}
+          desc={product.desc}
         />
       ))}
     </div>

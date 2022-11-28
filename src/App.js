@@ -7,16 +7,21 @@ import List from "./components/list/List";
 import Mobile from "./components/mobile/Mobile";
 import Layout from "./components/shared/Layout/Layout";
 
+// Context
+import MobileContextProvider from "./context/MobileContextProvider";
+
 const App = () => {
   return (
     <>
-      <Navbar />
-      <Layout>
-        <Routes>
-          <Route path="/" element={<List />} />
-          <Route path="/mobile" element={<Mobile />} />
-        </Routes>
-      </Layout>
+      <MobileContextProvider>
+        <Navbar />
+        <Layout>
+          <Routes>
+            <Route path="/" element={<List />} />
+            <Route path="/mobile" element={<Mobile />} />
+          </Routes>
+        </Layout>
+      </MobileContextProvider>
     </>
   );
 };
