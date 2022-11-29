@@ -23,13 +23,12 @@ const Mobile = () => {
 
   // Change Handler
   const changeHandler = (event) => {
-    setModelValue({ ...modelValue, [event.target.name]: event.target.value });
-  };
-
-  const imageHandler = (event) => {
     setModelValue({
       ...modelValue,
-      [event.target.name]: URL.createObjectURL(event.target.files[0]),
+      [event.target.name]:
+        event.target.name === "image"
+          ? URL.createObjectURL(event.target.files[0])
+          : event.target.value,
     });
   };
 
@@ -82,7 +81,7 @@ const Mobile = () => {
 
         <Input
           multiple={false}
-          onChange={imageHandler}
+          onChange={changeHandler}
           name="image"
           accept="image/*"
           type="file"
